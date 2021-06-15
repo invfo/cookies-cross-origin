@@ -1,7 +1,9 @@
 <img src="https://cookies-sandbox.herokuapp.com/cookie" alt="cookie image" />
 <div id="whoami"></div>
 <script>
-  fetch("https://cookies-sandbox.herokuapp.com/whoami").then((response) => {
+  fetch("https://cookies-sandbox.herokuapp.com/whoami", {
+    credentials: "include",
+  }).then((response) => {
     document.getElementById("whoami").innerHTML = response.json();
   });
 </script>
